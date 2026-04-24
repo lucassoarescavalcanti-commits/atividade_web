@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aliceblue;
+    min-height: 100vh;
+    background-image: url(img/baixados.webp);
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+main{
+    min-height: 1200px;
+}
+
+.zap{
+    width: 50px;
+    margin: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.flex{
+    display: flex;
+    gap: 50px;
+    margin: 50px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px black;
+    transition: all 1s ease;
+}
+
+.box-texto{
+    width: 50%;
+    height: 150px;
+    background-color: blueviolet;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    font-size: 36px;
+    overflow: auto;
+}
+.foto{
+    width: 100px;
+    float: left;
+}
+
+.limpar{
+    clear: both;
+}
+
+.grad{
+    background: linear-gradient(red, orange, yellow);
+}
+.grad:hover{
+    transform: translateY(-15px)
+}
+
+.grad2{
+    background: linear-gradient(to left, red, orange, yellow);
+}
+.grad2:hover{
+    transform: translateY(15px);
+}
+
+.grad3{
+    background: linear-gradient(45deg, red, orange, yellow);
+}
+.grad3:hover{
+    transform: translateX(-15px);
+}
+
+.grad4{
+    background: radial-gradient(red,orange, yellow);
+}
+.grad4:hover{
+    transform: translateX(15px);
+}
+
+.grad5{
+    background: conic-gradient(red,orange, yellow);
+}
+.grad5:hover{
+    transform: scale(0.5);
+}
+
+.grad6{
+    background: conic-gradient(red,orange 90deg, yellow);
+}
+.grad6:hover{
+    transform: scale(1.5);
+}
+
+.grad7{
+    background: linear-gradient(to right, red, orange, yellow);
+}
+.grad7:hover{
+    transform: rotate(45deg)
+}
+
+.grad8{
+    background: linear-gradient(to top, red, orange, yellow);
+}
+.grad8:hover{
+    transform: rotate(-90deg)
+}
