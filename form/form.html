@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+        <label>Nome:</label><br>
+        <input type="text" id="nome">
+        <br><br>
+
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="Masculino">Masculino
+        <input type="radio" name="sexo" value="Feminino">Feminino
+        <br><br>
+
+        <label>Interesses:</label>
+        <input type="checkbox" name="interesse" value="Tecnologia">Tecnologia
+        <input type="checkbox" name="interesse" value="Jogos">Jogos
+        <input type="checkbox" name="interesse" value="Música">Música
+        <br><br>
+
+        <label>Estado:</label>
+        <select id="estado">
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+        <br><br>
+
+        <button onclick="enviar()">Enviar</button>
+
+        <hr>
+        <div id="resultado"></div>
+</body>
+<script src="script.js"></script>
+</html>
