@@ -1,0 +1,110 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#141414;
+      color:white;
+      min-height:100vh;
+    }
+
+    header{
+      background:#000;
+      padding:20px;
+      text-align:center;
+    }
+
+    header h1{
+      color: orangered;
+      margin-bottom:15px;
+    }
+
+    .busca{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    input{
+      width:300px;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      border-radius:8px;
+      background:orangered;
+      color:white;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.05);
+    }
+
+    .container{
+      padding:30px;
+    }
+
+    .produtos{
+      margin-top: 50px;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
+        gap:20px;
+    }
+
+    .card{
+      background:#222;
+      border-radius:12px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .info{
+      padding:15px;
+    }
+
+    .info h2{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .info p{
+      margin-bottom:8px;
+      color:#ccc;
+    }
+
+    .mensagem{
+      text-align:center;
+      margin-top:30px;
+      font-size:20px;
+    }
+
+    .topo{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+      flex-wrap:wrap;
+      gap:10px;
+    }
