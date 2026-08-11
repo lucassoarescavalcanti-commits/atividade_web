@@ -1,0 +1,37 @@
+h1{
+    display: block;
+    justify-self: center;
+    text-decoration: underline;
+    
+}
+
+h3{
+    display: block;
+    justify-self: center;
+
+}
+
+
+p{
+    text-align: center;
+}
+
+.info{
+    text-align: start;
+
+}
+
+
+img{
+    display: flex;
+    width: 150px;
+    height: 200px;
+    justify-self: end;
+    position: absolute;
+    top: 0;
+
+}
+
+div{
+    position: relative;
+}
