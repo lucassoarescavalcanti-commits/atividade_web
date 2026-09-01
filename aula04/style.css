@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+}
+form{
+    width: 40vw;
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: brown;
+    border-radius: 10px;
+    color: white;
+}
+label{
+    font-size: 24px;
+    font-weight: bold;
+}
+input[type=email], input[type=password], input[type=submit]{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+input[type=checkbox]{
+    margin-right: 5px;
+}
+input[type=submit]{
+    background-color: chocolate;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+.msg{
+    width: 40vw;
+    background-color: burlywood;
+    position: fixed;
+    top: 0;
+    left: 30vw;
+    padding: 20px;
+    color: brown;
+}
