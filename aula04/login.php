@@ -44,7 +44,7 @@
             $senha = $_POST['senha'];
 
             if(isset($_POST['lembre'])){
-                setcookie('email',$email,time()+45645);
+                setcookie('email',$email,time()+1800);
             }
 
             if($email=="admin@email.com"){
