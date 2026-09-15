@@ -10,14 +10,16 @@ else{
     header('Location:login.php');
 }
 
-  $response = file_get_contents('https://fakestoreapi.com/');
+  $response = file_get_contents('https://fakestoreapi.com/products');
   $produtos = json_decode($response, true);
 
+  if(!isset($_SESSION['carrinho'])){
+      $_SESSION['carrinho'] = [];
+      
+  }
 
-// $carrinho = [];
-// if(isset($_SESSION['carrinho'])){
 
-//     }
+
 
 
 ?>
@@ -100,13 +102,7 @@ else{
                 <h2><?php echo $prod['title'];?></h2>
                 <h3><?php echo $prod['category']; ?></h3>
                 <p><?php echo $prod['price']; ?></p>
-                <a href="carrinho.php?id=<?php echo $prod['id'];?>">Comprar</a>
-                
-                
-               
-                
-                
-                
+                <a href="carrinho.php?id=<?php echo $prod['id'];?>&title=<?php echo $prod['title'];?>&price=<?php echo $prod['price'];?>">Comprar</a>
                 
             </article>
             <?php
