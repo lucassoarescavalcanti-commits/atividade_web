@@ -1,10 +1,9 @@
 <?php
-
+$total =0;
 // echo "Produto: " . $_GET['id'];
 // echo "<br>Produto: " . $_GET['title'];
 session_start();
 $id = $_GET['id'];
-$price = $_GET['price'];
 $acao = $_GET['acao'] ?? 'somar';
 
 if(!isset($_SESSION['carrinho'])){
@@ -105,14 +104,14 @@ if($acao === 'subtrair'){
     foreach($_SESSION['carrinho'] as $id => $quantidade){
     $response = file_get_contents('https://fakestoreapi.com/products/' . $id);
     $produtos = json_decode($response, true);
-
+    $total += $produtos['price']*$quantidade;
     
     
     ?>
     <article>
         <img src="<?php echo $produtos['image'];?>" width="100px" height="80px">
-        <h2><?php echo $produtos['title'];?></h1>
-        <h3><?php echo $produtos['category'];?></h1>
+        <h2><?php echo $produtos['title'];?></h2>
+        <h3><?php echo $produtos['category'];?></h3>
         <p><?php echo $produtos['price'];?></p>
         <p><?php echo $quantidade; ?></p>
         <a href="carrinho.php?id=<?php echo $id?>" class="quantidade soma">+</a>
@@ -123,13 +122,14 @@ if($acao === 'subtrair'){
 }
 
 ?>
-    <?php
-    
-    foreach($produtos as $prod => $id){
-        echo $prod['price'];
-    }
-    
-    ?>
+ 
+ 
+ 
+ <section>
+     <h1>Total</h1>
+    <h2><?php echo $total;?></h2>
+</section>
+
     <a href="dashboard.php">Continuar Comprando</a>
     
 </section>

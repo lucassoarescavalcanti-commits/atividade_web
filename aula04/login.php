@@ -53,15 +53,35 @@
                     session_start();
 
                     $_SESSION['email-user'] = $email;
-                    header('Location:dashboard.php');
+                    header('Location:usuario.php');
                 }
                 else{
                     echo "<p class='msg'>Senha incorreta!</p>";
                 }
+                exit;
             }
-            else{
-                echo "<p class='msg'>E-mail incorreto!</p>";
+            else {
+                $arquivo = fopen("usuarios.txt", "r");
+                $conteudo = fread($arquivo, filesize("usuarios.txt"));
+                // echo nl2br($conteudo);
+                fclose($arquivo);
+
+                $usuarios = explode("\n", $conteudo);
+                array_pop($usuarios); //remobe o ultimo elemento do array
+                
+                foreach($usuarios as $user)
+                    {$u = explode("|", $user);
+                    if($email == $u[1] && $senha == $u[2]){
+                        session_start();
+                        $_SESSION['email-user'] = $email;
+                        header('Location:dashboard.php');
+                        exit;
+                    }
+                }
             }
+
+            echo "<script>alert('Email ou Senha Incorretos.')</script>";
+
         }
     }
 
